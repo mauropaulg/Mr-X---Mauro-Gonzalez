@@ -72,6 +72,7 @@ body{
     background-color: rgba(165, 42, 42, 0.521);
     grid-area: main;
     width: 100%;
+    min-height: 90vh;                           /*que ocupr como minimo ese tamano de alto*/
 }
 
 .items {
