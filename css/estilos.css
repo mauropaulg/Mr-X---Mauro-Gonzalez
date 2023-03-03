@@ -12,7 +12,7 @@ body{
 
         background-attachment: fixed;
         min-height: 100vh;
-        border: 5px solid red;
+        
     }
 .contenedor-grid{
     display: grid;
@@ -69,10 +69,10 @@ body{
 
 
 .main{
-    background-color: rgba(165, 42, 42, 0.521);
+    
     grid-area: main;
     width: 100%;
-    min-height: 90vh;                           /*que ocupr como minimo ese tamano de alto*/
+    min-height: 60vh;                           /*que ocupr como minimo ese tamano de alto*/
 }
 
 .items {
