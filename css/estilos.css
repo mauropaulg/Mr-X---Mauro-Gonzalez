@@ -26,7 +26,6 @@ body{
     grid-area: head;
 }
 .titulo {                                   /* pocisiciona titulo de la cabecera*/
-    /*background-color: rgba(0, 0, 0, 0.671);*/
     font-family: cursive;
     font-size: 2em;
     color: rgb(11, 11, 252);
@@ -88,12 +87,108 @@ body{
     padding: 2vh;
 }
 
+        /*main de servicio*/
+.ComentarioPadre{
+    display: flex;
+    align-items: start;
+}
+.imgRedonda{
+    border-radius: 50%;
+    
+}
+.ComentarioPadreHijo{
+    border: 1px solid black;
+    margin: 2px;
+}
+            /*estas son clases de main capitulos*/
+.main-cap {
 
+    width: 100%;
+    height: auto;
+    margin-bottom: 5vh;
+}
+
+.titulo-cap {
+    /*titulo "temporadas"*/
+    color: rgb(11, 11, 252);
+    font-size: 2em;
+    text-align: center;
+    font-family: cursive;
+
+}
+.padre-cap {
+    /*posicion y espaciodado de las temporadas*/
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+
+}
+
+.cads {
+    /*tamaño y sombreado de las cads*/
+    width: 20vh;
+    height: 25vh;
+    margin: 5vh;
+    box-shadow: 0 0 50px rgb(0, 0, 0);
+}
+
+.img-capitulo {
+    /*imagenes de los capitulos*/
+    width: 100%;
+}
+.tamVideo{
+    width: 100%;
+    height: 40vh;
+}
+/*estas son clases de main contactos*/
+.padre-ubi {
+
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cen-tex-item {
+    font-family: 'Mynerve';
+    font-weight: bold;
+    color: rgb(255, 255, 0);
+    font-size: 1.5em;
+    line-height: 10vh;
+}
+
+.mapa {
+    width: 60vh;
+    height: 60vh;
+}
+
+.cen-form {
+    padding-left: 20vh;
+}
+            /*todas estas clases son del footer*/
 .footer{
 
     margin: 1%;
     grid-area: footer;
 
+}
+.icono-padre {
+    width: 22vw;
+    height: 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.icono {
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
 }
 .caja-padre {                                           /*caja que contiene todos los elemento*/
     background-color: gray;
@@ -104,22 +199,20 @@ body{
     justify-content: space-between;
 }
 .imagen-3 {                                      /*solo tamaño de la imagen del footer*/
-    width: 12vh;
+    width: 10vh;
     height: auto;
 }
-
 .mover-img {                                    /*solo para centrar la imagen*/
     position: absolute;
     margin-left: 30vh;
 }
-
 .mov-text {                                       /*centrar los textos*/
     font-size: 0.8em;
 }
 
 
     
-@media  (min-width: 1024px) {                                                                           /*esto es para escritorio*/
+@media  (min-width: 1024px) {                                 /*ESTO ES PARA ESCRITORIO*/
     
 
                             /*estas son clases del header*/
@@ -168,7 +261,6 @@ body{
     .ancla{                                                     /*quitar el subrajado a las anclas*/
         font-size: 2.5em;
     }
-
     .caja-1{                                                    /*cajas adorno que continen el header*/
         background-color: rgb(148, 147, 147);
         border: 2px solid black;
@@ -176,18 +268,18 @@ body{
         height: 70vh;
         position: absolute;
         top: 30px;
-        left: 5vh;
+        left: 30px;
     }
     .caja-2{                                                    /*cajas*/
         background-color: rgb(148, 147, 147);
         border-top: 2px solid black;
         border-bottom: 2px solid black;
         border-right: 2px solid black;
-        width: 155vh;
+        width: 156.5vh;
         height: 40vh;
         position: absolute;
         top: 30px;
-        right: 5vh;
+        right: 30px;
     }
 
 
@@ -221,61 +313,33 @@ body{
     
 
     /*estas son clases de main capitulos*/
-    .main-cap{
-        width: 100%;
-        height: auto;
-        margin-top: -5vh;
-        margin-bottom: 5vh;
-    }
+
     .titulo-cap{                                                /*titulo "temporadas"*/
-        /*background-color: rgba(0, 0, 255, 0.466);*/
-        color: rgb(11, 11, 252);
         font-size: 3em;
-        text-align: center;
-        font-family: cursive;
     }
     .padre-cap{                                                 /*posicion y espaciodado de las temporadas*/
         width: 100%;
         height: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-wrap: wrap;
-        align-content: space-around ;
-        
     }
     .cads{                                                      /*tamaño y sombreado de las cads*/
         width: 40vh;
         height: 55vh;
         margin: 10vh;
-        box-shadow: 0 0 50px rgb(0, 0, 0);
         overflow:hidden;
     }
-    .img-capitulo{                                              /*imagenes de los capitulos*/
-        width: 100%;
-    }
+    
 
 
     /*estas son clases de main contactos*/
     .padre-ubi{
-        
-        display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
     }
     .cen-tex-item{
-        font-family: 'Mynerve';
-        font-weight: bold;
-        color: rgb(255, 255, 0);
-        
         font-size: 1.8em;
-        line-height: 10vh;
     }
     .mapa{
         width: 90vh;
-        height: 60vh;
+
     }
     .cen-form{
         padding-left: 80vh;
@@ -286,10 +350,14 @@ body{
 
     /*estas son clases del footer*/
 
-
-    .footer{                                                /*tamaño ocupa el footer en la pagina*/
-        height: 20vh;
+        
+    
+    .icono-padre{
+        width: 12vw;
+        height: 5vw;
+        
     }
+    
     .caja-padre{                                            /*caja que contiene todos los elemento*/
         background-color: gray;
         width: 98%;
@@ -299,7 +367,7 @@ body{
         justify-content: space-around;
     }
     .imagen-3{                                             /*solo tamaño de la imagen del footer*/
-        width: 20vh;
+        width: 15vh;
         height: auto;
     }
     .mover-img{                                            /*solo para centrar la imagen*/
