@@ -211,7 +211,28 @@ body{
 }
 
 
+
+                    /*clases a eliminar porque son ayuda del bootstrap*/
+.color-g{
+    background-color: rgb(148, 147, 147) ;
+}
+.fuente{
+    font-family: 'Mynerve',cursive /*'Labrada',serif*/;
+    font-size: 0.7em ;
+}
+.color-titulo{
+    font-family: cursive;
+    color: rgb(11, 11, 252);
+}
+.fuente-simpson{
+    color: yellow;
+    font-family: 'Mynerve', cursive ;
+}
     
+
+
+
+
 @media  (min-width: 1024px) {                                 /*ESTO ES PARA ESCRITORIO*/
     
 
