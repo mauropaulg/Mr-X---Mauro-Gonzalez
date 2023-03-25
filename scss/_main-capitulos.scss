@@ -1,0 +1,70 @@
+/*estas son clases de main capitulos*/
+.main-cap {
+
+    width: 100%;
+    height: auto;
+    margin-bottom: 5vh;
+}
+
+.titulo-cap {
+    /*titulo "temporadas"*/
+    color: rgb(11, 11, 252);
+    font-size: 2em;
+    text-align: center;
+    font-family: cursive;
+
+}
+
+.padre-cap {
+    /*posicion y espaciodado de las temporadas*/
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+
+}
+
+.cads {
+    /*tamaño y sombreado de las cads*/
+    width: 20vh;
+    height: 25vh;
+    margin: 5vh;
+    box-shadow: 0 0 50px rgb(0, 0, 0);
+}
+
+.img-capitulo {
+    /*imagenes de los capitulos*/
+    width: 100%;
+}
+
+.tamVideo {
+    width: 100%;
+    height: 40vh;
+}
+
+@media (min-width: 1024px){
+    /*estas son clases de main capitulos*/
+    
+        .titulo-cap {
+            /*titulo "temporadas"*/
+            font-size: 3em;
+        }
+    
+        .padre-cap {
+            /*posicion y espaciodado de las temporadas*/
+            width: 100%;
+            height: auto;
+        }
+    
+        .cads {
+            /*tamaño y sombreado de las cads*/
+            width: 40vh;
+            height: 55vh;
+            margin: 10vh;
+            overflow: hidden;
+        }
+}

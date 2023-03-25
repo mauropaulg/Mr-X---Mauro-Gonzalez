@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://us.123rf.com/450wm/alexpokusay/alexpokusay1510/alexpokusay151000086/46310461-cielo-con-nubes-incons%C3%BAtil-del-vector-ilustraci%C3%B3n-de-fondo.jpg);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.contenedor-grid {
+    display: grid;
+    grid-template-areas: "head head"
+        "main main"
+        "footer footer";
+    align-items: stretch;
+}

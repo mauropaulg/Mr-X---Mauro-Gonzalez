@@ -1,0 +1,131 @@
+.header {
+    grid-area: head;
+    .cabecera{
+        .titulo {
+            /* pocisiciona titulo de la cabecera*/
+            font-family: cursive;
+            font-size: 2em;
+            color: rgb(11, 11, 252);
+            text-align: center;
+            margin-bottom: -90px;
+            z-index: 1;
+        }
+        .contenedor-img {
+            /*posiciona solo imagenes*/
+            background-color: $color-primario;
+            border: $borde-general;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            padding: 1%;
+            margin: 1%;
+            .imagen-1 {
+                /*tamaño de las imagenes*/
+                width: 12vh;
+                height: auto;
+            }
+            .imagen-2 {
+                width: 10vh;
+                height: auto;
+            }
+        }
+    }
+    .nav__lista{
+        
+        /* posicionando anclas de navegacion*/
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 10px;
+        list-style-type: none;
+
+        .ancla {
+            /*quitar el subrajado a las anclas*/
+            font-family: 'Mynerve';
+            text-decoration: none;
+            color: rgb(255, 255, 0);
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    }
+}
+
+
+
+
+@media (min-width: 1024px){
+    /*estas son clases del header*/
+    .header {
+        width: 100%;
+        height: 80vh;
+        .cabecera {
+            /*cabecera incluye imagenes y titulo, solo se aplica de escritorio*/
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            .titulo {
+                /* pocisiciona titulo de la cabecera*/
+                font-size: 4.5em;
+                width: 90vh;
+                height: 20vh;
+                margin-right: 50vh;
+                margin-top: 7vh;
+            }
+            .contenedor-img {
+                /*posiciona solo imagenes*/
+                border: none;
+                width: 30vh;
+                height: 67vh;
+                margin-left: 10vh;
+                margin-top: 5vh;
+                flex-direction: column;
+                align-items: center;
+                z-index: 1;
+                .imagen-1 {
+                    /*tamaño de las imagenes*/
+                    width: 25vh;
+                    margin-top: 3vh;
+                }
+                .imagen-2 {
+                    width: 25vh;
+                }
+            }
+        }
+        .nav {
+            /*navegador movido hacia arriba*/
+            margin-top: -25vh;
+            .nav__lista {
+                /* posicionando anclas de navegacion*/
+                margin-left: 50vh;
+                margin-right: 10vh;
+                .ancla {
+                    font-size: 2.5em;
+                }
+            }
+        }
+    }
+    
+    .caja-1 {
+        /*cajas adorno que continen el header*/
+        background-color: $color-primario;
+        border: $borde-general;
+        width: 40vh;
+        height: 70vh;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    
+    .caja-2 {
+        /*cajas*/
+        background-color: $color-primario;
+        border-top: $borde-general;
+        border-bottom: $borde-general;
+        border-right: $borde-general;
+        width: 156.5vh;
+        height: 40vh;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+}

@@ -1,0 +1,83 @@
+/*todas estas clases son del footer*/
+.footer {
+
+    margin: 1%;
+    grid-area: footer;
+
+}
+
+.icono-padre {
+    width: 22vw;
+    height: 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icono {
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+}
+
+.caja-padre {
+    /*caja que contiene todos los elemento*/
+    background-color: $color-primario;
+    margin: auto;
+    border: $borde-general;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.imagen-3 {
+    /*solo tamaño de la imagen del footer*/
+    width: 10vh;
+    height: auto;
+}
+
+.mover-img {
+    /*solo para centrar la imagen*/
+    position: absolute;
+    margin-left: 30vh;
+}
+
+.mov-text {
+    /*centrar los textos*/
+    font-size: 0.8em;
+    font-family: cursive;
+}
+
+@media (min-width: 1024px) {
+    
+    /*estas son clases del footer*/
+        
+        .icono-padre {
+            width: 12vw;
+            height: 5vw;
+        }
+    
+        .caja-padre {
+            /*caja que contiene todos los elemento*/
+            width: 98%;
+            justify-content: space-around;
+        }
+    
+        .imagen-3 {
+            /*solo tamaño de la imagen del footer*/
+            width: 15vh;
+            height: auto;
+        }
+    
+        .mover-img {
+            /*solo para centrar la imagen*/
+            position: absolute;
+            margin: auto;
+        }
+    
+        .mov-text {
+            /*centrar los textos*/
+            font-size: 1.3em;
+        }
+}

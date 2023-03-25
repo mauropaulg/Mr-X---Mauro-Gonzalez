@@ -1,0 +1,46 @@
+/*estas son clases de main contactos*/
+.padre-ubi {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cen-tex-item {
+    font-family: 'Mynerve';
+    font-weight: bold;
+    color: rgb(255, 255, 0);
+    font-size: 1.5em;
+    line-height: 10vh;
+}
+
+.mapa {
+    width: 60vh;
+    height: 60vh;
+}
+
+.cen-form {
+    padding-left: 20vh;
+}
+
+@media (min-width: 1024px) {
+
+    /*estas son clases de main contactos*/
+    .padre-ubi {
+        flex-direction: row;
+    }
+
+    .cen-tex-item {
+        font-size: 1.8em;
+    }
+
+    .mapa {
+        width: 90vh;
+
+    }
+
+    .cen-form {
+        padding-left: 80vh;
+    }
+}

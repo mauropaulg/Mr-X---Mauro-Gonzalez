@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /*crear variables*/
-@import url("https://fonts.googleapis.com/css2?family=Labrada:ital@1&family=Mynerve&display=swap");
 /*font-family: 'Labrada',serif;
 font-family: 'Mynerve',cursive;*/
+@import url("https://fonts.googleapis.com/css2?family=Labrada:ital@1&family=Mynerve&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -20,51 +20,109 @@ body {
 
 .header {
   grid-area: head; }
+  .header .cabecera .titulo {
+    /* pocisiciona titulo de la cabecera*/
+    font-family: cursive;
+    font-size: 2em;
+    color: #0b0bfc;
+    text-align: center;
+    margin-bottom: -90px;
+    z-index: 1; }
+  .header .cabecera .contenedor-img {
+    /*posiciona solo imagenes*/
+    background-color: #949393;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 1%;
+    margin: 1%; }
+    .header .cabecera .contenedor-img .imagen-1 {
+      /*tamaño de las imagenes*/
+      width: 12vh;
+      height: auto; }
+    .header .cabecera .contenedor-img .imagen-2 {
+      width: 10vh;
+      height: auto; }
+  .header .nav__lista {
+    /* posicionando anclas de navegacion*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px;
+    list-style-type: none; }
+    .header .nav__lista .ancla {
+      /*quitar el subrajado a las anclas*/
+      font-family: 'Mynerve';
+      text-decoration: none;
+      color: yellow;
+      font-size: 1.2em;
+      font-weight: bold; }
 
-.titulo {
-  /* pocisiciona titulo de la cabecera*/
-  font-family: cursive;
-  font-size: 2em;
-  color: #0b0bfc;
-  text-align: center;
-  margin-bottom: -90px;
-  z-index: 1; }
+@media (min-width: 1024px) {
+  /*estas son clases del header*/
+  .header {
+    width: 100%;
+    height: 80vh; }
+    .header .cabecera {
+      /*cabecera incluye imagenes y titulo, solo se aplica de escritorio*/
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between; }
+      .header .cabecera .titulo {
+        /* pocisiciona titulo de la cabecera*/
+        font-size: 4.5em;
+        width: 90vh;
+        height: 20vh;
+        margin-right: 50vh;
+        margin-top: 7vh; }
+      .header .cabecera .contenedor-img {
+        /*posiciona solo imagenes*/
+        border: none;
+        width: 30vh;
+        height: 67vh;
+        margin-left: 10vh;
+        margin-top: 5vh;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1; }
+        .header .cabecera .contenedor-img .imagen-1 {
+          /*tamaño de las imagenes*/
+          width: 25vh;
+          margin-top: 3vh; }
+        .header .cabecera .contenedor-img .imagen-2 {
+          width: 25vh; }
+    .header .nav {
+      /*navegador movido hacia arriba*/
+      margin-top: -25vh; }
+      .header .nav .nav__lista {
+        /* posicionando anclas de navegacion*/
+        margin-left: 50vh;
+        margin-right: 10vh; }
+        .header .nav .nav__lista .ancla {
+          font-size: 2.5em; }
+  .caja-1 {
+    /*cajas adorno que continen el header*/
+    background-color: #949393;
+    border: 2px solid black;
+    width: 40vh;
+    height: 70vh;
+    position: absolute;
+    top: 30px;
+    left: 30px; }
+  .caja-2 {
+    /*cajas*/
+    background-color: #949393;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    width: 156.5vh;
+    height: 40vh;
+    position: absolute;
+    top: 30px;
+    right: 30px; } }
 
-.contenedor-img {
-  /*posiciona solo imagenes*/
-  background-color: #949393;
-  border: 1px solid black;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  padding: 1%;
-  margin: 1%; }
-
-.imagen-1 {
-  /*tamaño de las imagenes*/
-  width: 12vh;
-  height: auto; }
-
-.imagen-2 {
-  width: 10vh;
-  height: auto; }
-
-.nav ul {
-  /* posicionando anclas de navegacion*/
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 10px;
-  list-style-type: none; }
-
-.ancla {
-  /*quitar el subrajado a las anclas*/
-  font-family: 'Mynerve';
-  text-decoration: none;
-  color: yellow;
-  font-size: 1.2em;
-  font-weight: bold; }
-
+/*estas son clases del main index*/
 .main {
   grid-area: main;
   width: 100%;
@@ -73,7 +131,7 @@ body {
 
 .items {
   background-color: #5ffa5f;
-  border: 1px solid black;
+  border: 2px solid black;
   width: auto;
   height: auto;
   text-decoration: underline;
@@ -82,6 +140,30 @@ body {
   font-size: 1em;
   margin: 3% 9%;
   padding: 2vh; }
+
+@media (min-width: 1024px) {
+  /*estas son clases de main de la pagina principal (index)*/
+  .main {
+    width: 100%;
+    height: auto;
+    margin-top: -20vh; }
+  .mov-padre {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end; }
+  .items {
+    background-color: #5ffa5f;
+    border: 2px solid black;
+    width: 150vh;
+    height: auto;
+    text-decoration: underline;
+    text-align: center;
+    font-family: cursive;
+    font-size: 2.3em;
+    margin-top: 5vh;
+    margin-right: 5vh;
+    padding: 5vh; } }
 
 /*main de servicio*/
 .ComentarioPadre {
@@ -92,7 +174,7 @@ body {
   border-radius: 50%; }
 
 .ComentarioPadreHijo {
-  border: 1px solid black;
+  border: 2px solid black;
   margin: 2px; }
 
 /*estas son clases de main capitulos*/
@@ -132,6 +214,22 @@ body {
   width: 100%;
   height: 40vh; }
 
+@media (min-width: 1024px) {
+  /*estas son clases de main capitulos*/
+  .titulo-cap {
+    /*titulo "temporadas"*/
+    font-size: 3em; }
+  .padre-cap {
+    /*posicion y espaciodado de las temporadas*/
+    width: 100%;
+    height: auto; }
+  .cads {
+    /*tamaño y sombreado de las cads*/
+    width: 40vh;
+    height: 55vh;
+    margin: 10vh;
+    overflow: hidden; } }
+
 /*estas son clases de main contactos*/
 .padre-ubi {
   display: flex;
@@ -153,6 +251,17 @@ body {
 .cen-form {
   padding-left: 20vh; }
 
+@media (min-width: 1024px) {
+  /*estas son clases de main contactos*/
+  .padre-ubi {
+    flex-direction: row; }
+  .cen-tex-item {
+    font-size: 1.8em; }
+  .mapa {
+    width: 90vh; }
+  .cen-form {
+    padding-left: 80vh; } }
+
 /*todas estas clases son del footer*/
 .footer {
   margin: 1%;
@@ -173,9 +282,9 @@ body {
 
 .caja-padre {
   /*caja que contiene todos los elemento*/
-  background-color: gray;
+  background-color: #949393;
   margin: auto;
-  border: 1px solid black;
+  border: 2px solid black;
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
@@ -192,130 +301,17 @@ body {
 
 .mov-text {
   /*centrar los textos*/
-  font-size: 0.8em; }
+  font-size: 0.8em;
+  font-family: cursive; }
 
 @media (min-width: 1024px) {
-  /*ESTO ES PARA ESCRITORIO*/
-  /*estas son clases del header*/
-  .header {
-    width: 100%;
-    height: 80vh; }
-  .cabecera {
-    /*cabecera incluye imagenes y titulo*/
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between; }
-  .titulo {
-    /* pocisiciona titulo de la cabecera*/
-    font-size: 4.5em;
-    width: 90vh;
-    height: 20vh;
-    margin-right: 50vh;
-    margin-top: 7vh; }
-  .contenedor-img {
-    /*posiciona solo imagenes*/
-    border: none;
-    width: 30vh;
-    height: 67vh;
-    margin-left: 10vh;
-    margin-top: 5vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1; }
-  .imagen-1 {
-    /*tamaño de las imagenes*/
-    width: 25vh;
-    margin-top: 3vh; }
-  .imagen-2 {
-    width: 25vh; }
-  .nav {
-    /*navegador movido hacia arriba*/
-    margin-top: -25vh; }
-  .nav ul {
-    /* posicionando anclas de navegacion*/
-    margin-left: 50vh;
-    margin-right: 10vh; }
-  .ancla {
-    /*quitar el subrajado a las anclas*/
-    font-size: 2.5em; }
-  .caja-1 {
-    /*cajas adorno que continen el header*/
-    background-color: #949393;
-    border: 2px solid black;
-    width: 40vh;
-    height: 70vh;
-    position: absolute;
-    top: 30px;
-    left: 30px; }
-  .caja-2 {
-    /*cajas*/
-    background-color: #949393;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
-    width: 156.5vh;
-    height: 40vh;
-    position: absolute;
-    top: 30px;
-    right: 30px; }
-  /*estas son clases de main de la pagina principal (index)*/
-  .main {
-    width: 100%;
-    height: auto;
-    margin-top: -20vh; }
-  .mov-padre {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: end; }
-  .items {
-    background-color: #5ffa5f;
-    border: 2px solid black;
-    width: 150vh;
-    height: auto;
-    text-decoration: underline;
-    text-align: center;
-    font-family: cursive;
-    font-size: 2.3em;
-    margin-top: 5vh;
-    margin-right: 5vh;
-    padding: 5vh; }
-  /*estas son clases de main capitulos*/
-  .titulo-cap {
-    /*titulo "temporadas"*/
-    font-size: 3em; }
-  .padre-cap {
-    /*posicion y espaciodado de las temporadas*/
-    width: 100%;
-    height: auto; }
-  .cads {
-    /*tamaño y sombreado de las cads*/
-    width: 40vh;
-    height: 55vh;
-    margin: 10vh;
-    overflow: hidden; }
-  /*estas son clases de main contactos*/
-  .padre-ubi {
-    flex-direction: row; }
-  .cen-tex-item {
-    font-size: 1.8em; }
-  .mapa {
-    width: 90vh; }
-  .cen-form {
-    padding-left: 80vh; }
   /*estas son clases del footer*/
   .icono-padre {
     width: 12vw;
     height: 5vw; }
   .caja-padre {
     /*caja que contiene todos los elemento*/
-    background-color: gray;
     width: 98%;
-    border: 2px solid black;
-    display: flex;
-    flex-direction: row;
     justify-content: space-around; }
   .imagen-3 {
     /*solo tamaño de la imagen del footer*/

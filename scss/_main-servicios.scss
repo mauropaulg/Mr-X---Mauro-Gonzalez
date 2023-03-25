@@ -1,0 +1,15 @@
+/*main de servicio*/
+.ComentarioPadre {
+    display: flex;
+    align-items: start;
+}
+
+.imgRedonda {
+    border-radius: 50%;
+
+}
+
+.ComentarioPadreHijo {
+    border: $borde-general;
+    margin: 2px;
+}
