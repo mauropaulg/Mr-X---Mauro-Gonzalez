@@ -30,21 +30,47 @@
 
 .cads {
     /*tamaño y sombreado de las cads*/
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 20vh;
     height: 25vh;
     margin: 5vh;
     box-shadow: 0 0 50px rgb(0, 0, 0);
+    position: relative;
 }
 
 .img-capitulo {
     /*imagenes de los capitulos*/
     width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
+.num-cap{
+    color: white;
+    font-size: 3em;
+}
+.img-capitulo:hover{
+    opacity: 0.4;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    -ms-transition: opacity 500ms;
+    transition: opacity 500ms;
+    z-index: 0;
+}
+
+
 
 .tamVideo {
     width: 100%;
     height: 40vh;
 }
+
+
 
 @media (min-width: 1024px){
     /*estas son clases de main capitulos*/
@@ -66,5 +92,8 @@
             height: 55vh;
             margin: 10vh;
             overflow: hidden;
+        }
+        .num-cap {
+            font-size: 5em;
         }
 }
