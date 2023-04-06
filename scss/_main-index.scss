@@ -1,13 +1,10 @@
 /*estas son clases del main index*/
 .main {
-
-    grid-area: main;
-    
-    /*que ocupr como minimo ese tamano de alto*/
+    grid-area:main;
 }
 
 .items {
-    background-color: rgb(95, 250, 95);
+    background-color: $color-secundario;
     border: $borde-general;
     width: auto;
     height: auto;
@@ -35,13 +32,7 @@
         }
     
         .items {
-            background-color: rgb(95, 250, 95);
-            border: $borde-general;
             width: 150vh;
-            height: auto;
-            text-decoration: underline;
-            text-align: center;
-            font-family: cursive;
             font-size: 2.3em;
             margin-top: 5vh;
             margin-right: 5vh;

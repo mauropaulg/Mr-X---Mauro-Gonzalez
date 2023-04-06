@@ -10,13 +10,14 @@ font-family: 'Mynerve',cursive;*/
 
 body {
   background-image: url(https://us.123rf.com/450wm/alexpokusay/alexpokusay1510/alexpokusay151000086/46310461-cielo-con-nubes-incons%C3%BAtil-del-vector-ilustraci%C3%B3n-de-fondo.jpg);
-  background-attachment: fixed;
-  min-height: 100vh; }
+  background-attachment: fixed; }
 
 .contenedor-grid {
   display: grid;
-  grid-template-areas: "head head" "main main" "footer footer";
-  align-items: stretch; }
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "head" "main" "footer";
+  /*align-items: stretch;*/ }
 
 .header {
   grid-area: head; }
@@ -39,10 +40,10 @@ body {
     margin: 1%; }
     .header .cabecera .contenedor-img .imagen-1 {
       /*tamaño de las imagenes*/
-      width: 12vh;
+      width: 8vh;
       height: auto; }
     .header .cabecera .contenedor-img .imagen-2 {
-      width: 10vh;
+      width: 8vh;
       height: auto; }
   .header .nav__lista {
     /* posicionando anclas de navegacion*/
@@ -124,8 +125,7 @@ body {
 
 /*estas son clases del main index*/
 .main {
-  grid-area: main;
-  /*que ocupr como minimo ese tamano de alto*/ }
+  grid-area: main; }
 
 .items {
   background-color: #5ffa5f;
@@ -151,44 +151,76 @@ body {
     justify-content: space-around;
     align-items: end; }
   .items {
-    background-color: #5ffa5f;
-    border: 2px solid black;
     width: 150vh;
-    height: auto;
-    text-decoration: underline;
-    text-align: center;
-    font-family: cursive;
     font-size: 2.3em;
     margin-top: 5vh;
     margin-right: 5vh;
     padding: 5vh; } }
 
 /*main de servicio*/
-.ComentarioPadre {
-  display: flex;
-  align-items: start; }
+.main {
+  grid-area: main; }
+  .main .posicion-servi-com {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+    /*comentarios*/ }
+    .main .posicion-servi-com .texto-servicio {
+      background-color: #5ffa5f;
+      border: 2px solid black;
+      text-decoration: underline;
+      text-align: center;
+      font-family: cursive;
+      font-size: 1em;
+      margin: 3% 9%;
+      padding: 2vh; }
+    .main .posicion-servi-com .contenedor-comentarios {
+      background-color: #5ffa5f;
+      border: 2px solid black;
+      font-family: cursive;
+      margin: 4vh;
+      padding: 2vh; }
+      .main .posicion-servi-com .contenedor-comentarios .titulo-comentario {
+        text-align: center;
+        font-size: 1.5em; }
+      .main .posicion-servi-com .contenedor-comentarios .posicion-img-com {
+        display: flex;
+        align-items: start;
+        margin-top: 5vh; }
+        .main .posicion-servi-com .contenedor-comentarios .posicion-img-com .imgRedonda {
+          width: 20%;
+          border-radius: 50%; }
+        .main .posicion-servi-com .contenedor-comentarios .posicion-img-com .Comentario {
+          margin-left: 3vh; }
 
-.imgRedonda {
-  border-radius: 50%; }
-
-.ComentarioPadreHijo {
-  border: 2px solid black;
-  margin: 2px; }
+@media (min-width: 1024px) {
+  .main .posicion-servi-com .texto-servicio {
+    width: 150vh;
+    font-size: 2.3em;
+    margin-top: 5vh;
+    margin-right: 5vh;
+    padding: 5vh; }
+  .contenedor-comentarios .titulo-comentario {
+    font-size: 2.5em; }
+  .contenedor-comentarios .posicion-img-com .imgRedonda {
+    width: 15%; }
+  .contenedor-comentarios .posicion-img-com .Comentario {
+    font-size: 1.5em; } }
 
 /*estas son clases de main capitulos*/
 .main-cap {
   width: 100%;
   height: auto;
   margin-bottom: 5vh; }
+  .main-cap .titulo-cap {
+    /*titulo "temporadas"*/
+    color: #0b0bfc;
+    font-size: 2em;
+    text-align: center;
+    font-family: cursive; }
 
-.titulo-cap {
-  /*titulo "temporadas"*/
-  color: #0b0bfc;
-  font-size: 2em;
-  text-align: center;
-  font-family: cursive; }
-
-.padre-cap {
+.cap-video {
   /*posicion y espaciodado de las temporadas*/
   display: flex;
   flex-direction: row;
@@ -298,7 +330,7 @@ body {
   align-items: center; }
 
 .icono {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-decoration: none;
   color: white; }
 
@@ -313,13 +345,13 @@ body {
 
 .imagen-3 {
   /*solo tamaño de la imagen del footer*/
-  width: 10vh;
+  width: 40%;
   height: auto; }
 
 .mover-img {
   /*solo para centrar la imagen*/
   position: absolute;
-  margin-left: 30vh; }
+  margin-left: 40%; }
 
 .mov-text {
   /*centrar los textos*/
@@ -331,6 +363,8 @@ body {
   .icono-padre {
     width: 12vw;
     height: 5vw; }
+  .icono {
+    font-size: 2rem; }
   .caja-padre {
     /*caja que contiene todos los elemento*/
     width: 98%;

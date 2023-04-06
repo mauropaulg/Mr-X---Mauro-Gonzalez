@@ -1,32 +1,29 @@
 /*estas son clases de main capitulos*/
 .main-cap {
-
     width: 100%;
     height: auto;
     margin-bottom: 5vh;
+    .titulo-cap {
+        /*titulo "temporadas"*/
+        color: rgb(11, 11, 252);
+        font-size: 2em;
+        text-align: center;
+        font-family: cursive;
+    }
+    
 }
-
-.titulo-cap {
-    /*titulo "temporadas"*/
-    color: rgb(11, 11, 252);
-    font-size: 2em;
-    text-align: center;
-    font-family: cursive;
-
-}
-
-.padre-cap {
-    /*posicion y espaciodado de las temporadas*/
+.cap-video{
+        /*posicion y espaciodado de las temporadas*/
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }  
 
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content: space-around;
 
-}
 
 .cads {
     /*tamaño y sombreado de las cads*/

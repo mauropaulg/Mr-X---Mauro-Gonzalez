@@ -1,9 +1,7 @@
 /*todas estas clases son del footer*/
 .footer {
-
     margin: 1%;
     grid-area: footer;
-
 }
 
 .icono-padre {
@@ -16,7 +14,7 @@
 }
 
 .icono {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-decoration: none;
     color: white;
 }
@@ -33,14 +31,14 @@
 
 .imagen-3 {
     /*solo tamaño de la imagen del footer*/
-    width: 10vh;
+    width: 40%;
     height: auto;
 }
 
 .mover-img {
     /*solo para centrar la imagen*/
     position: absolute;
-    margin-left: 30vh;
+    margin-left: 40%;
 }
 
 .mov-text {
@@ -56,6 +54,9 @@
         .icono-padre {
             width: 12vw;
             height: 5vw;
+        }
+        .icono {
+            font-size: 2rem;
         }
     
         .caja-padre {

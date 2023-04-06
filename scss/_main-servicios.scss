@@ -1,15 +1,75 @@
 /*main de servicio*/
-.ComentarioPadre {
-    display: flex;
-    align-items: start;
+.main {
+    grid-area: main;
+    .posicion-servi-com{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: end;
+        .texto-servicio{
+            background-color: $color-secundario;
+            border: $borde-general;
+            text-decoration: underline;
+            text-align: center;
+            font-family: cursive;
+            font-size: 1em;
+            margin: 3% 9%;
+            padding: 2vh;
+        }
+                                /*comentarios*/
+        .contenedor-comentarios{
+            background-color: $color-secundario;
+            border: $borde-general;
+            font-family: cursive;
+            margin: 4vh;
+            padding: 2vh;
+            .titulo-comentario{
+                text-align: center;
+                font-size: 1.5em;
+            }
+            .posicion-img-com{
+                display: flex;
+                align-items: start;
+                margin-top: 5vh;
+                .imgRedonda {
+                    width: 20%;
+                    border-radius: 50%;
+
+                }
+
+                .Comentario {
+                    margin-left: 3vh;
+                }
+            }
+        }
+    }
 }
 
-.imgRedonda {
-    border-radius: 50%;
 
-}
-
-.ComentarioPadreHijo {
-    border: $borde-general;
-    margin: 2px;
+@media (min-width: 1024px) {
+    .main{
+        .posicion-servi-com{
+            .texto-servicio{
+                width: 150vh;
+                font-size: 2.3em;
+                margin-top: 5vh;
+                margin-right: 5vh;
+                padding: 5vh;
+            }
+        }
+    }
+    
+    .contenedor-comentarios{
+        .titulo-comentario{
+            font-size: 2.5em;
+        }
+        .posicion-img-com{
+            .imgRedonda {
+                width: 15%;
+            }
+            .Comentario{
+                font-size: 1.5em;
+            }
+        }
+    }
 }
