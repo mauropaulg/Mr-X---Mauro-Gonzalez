@@ -16,8 +16,7 @@ body {
   display: grid;
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
-  grid-template-areas: "head" "main" "footer";
-  /*align-items: stretch;*/ }
+  grid-template-areas: "head" "main" "footer"; }
 
 .header {
   grid-area: head; }
@@ -54,7 +53,7 @@ body {
     list-style-type: none; }
     .header .nav__lista .ancla {
       /*quitar el subrajado a las anclas*/
-      font-family: 'Mynerve';
+      font-family: 'Mynerve',cursive;
       text-decoration: none;
       color: yellow;
       font-size: 1.2em;
@@ -126,18 +125,17 @@ body {
 /*estas son clases del main index*/
 .main {
   grid-area: main; }
-
-.items {
-  background-color: #5ffa5f;
-  border: 2px solid black;
-  width: auto;
-  height: auto;
-  text-decoration: underline;
-  text-align: center;
-  font-family: cursive;
-  font-size: 1em;
-  margin: 3% 9%;
-  padding: 2vh; }
+  .main .mov-padre .items {
+    background-color: #5ffa5f;
+    border: 2px solid black;
+    width: auto;
+    height: auto;
+    text-decoration: underline;
+    text-align: center;
+    font-family: cursive;
+    font-size: 1em;
+    margin: 3% 9%;
+    padding: 2vh; }
 
 @media (min-width: 1024px) {
   /*estas son clases de main de la pagina principal (index)*/
@@ -145,19 +143,18 @@ body {
     width: 100%;
     height: auto;
     margin-top: -20vh; }
-  .mov-padre {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: end; }
-  .items {
-    width: 150vh;
-    font-size: 2.3em;
-    margin-top: 5vh;
-    margin-right: 5vh;
-    padding: 5vh; } }
+    .main .mov-padre {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: end; }
+      .main .mov-padre .items {
+        width: 150vh;
+        font-size: 2.3em;
+        margin-top: 5vh;
+        margin-right: 5vh;
+        padding: 5vh; } }
 
-/*main de servicio*/
 .main {
   grid-area: main; }
   .main .posicion-servi-com {
@@ -208,113 +205,123 @@ body {
   .contenedor-comentarios .posicion-img-com .Comentario {
     font-size: 1.5em; } }
 
-/*estas son clases de main capitulos*/
-.main-cap {
-  width: 100%;
-  height: auto;
-  margin-bottom: 5vh; }
-  .main-cap .titulo-cap {
-    /*titulo "temporadas"*/
-    color: #0b0bfc;
-    font-size: 2em;
-    text-align: center;
-    font-family: cursive; }
+.titulos {
+  /*titulo "temporadas"*/
+  color: #0b0bfc;
+  font-size: 2em;
+  text-align: center;
+  font-family: cursive; }
 
-.cap-video {
+.portada-cap {
   /*posicion y espaciodado de las temporadas*/
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   align-content: space-around; }
+  .portada-cap .cads {
+    /*tamaño y sombreado de las cads*/
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vh;
+    height: 23vh;
+    margin: 3vh;
+    box-shadow: 0 0 50px black;
+    position: relative; }
+    .portada-cap .cads .num-cap {
+      color: white;
+      font-size: 3em; }
+    .portada-cap .cads .img-capitulo {
+      /*imagenes de los capitulos*/
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .portada-cap .cads .img-capitulo:hover {
+      opacity: 0.4;
+      -webkit-transition: opacity 500ms;
+      -moz-transition: opacity 500ms;
+      -o-transition: opacity 500ms;
+      -ms-transition: opacity 500ms;
+      transition: opacity 500ms;
+      z-index: 0; }
 
-.cads {
-  /*tamaño y sombreado de las cads*/
-  background-color: black;
+.video-inspiracion {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 20vh;
-  height: 25vh;
-  margin: 5vh;
-  box-shadow: 0 0 50px black;
-  position: relative; }
-
-.img-capitulo {
-  /*imagenes de los capitulos*/
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0; }
-
-.num-cap {
-  color: white;
-  font-size: 3em; }
-
-.img-capitulo:hover {
-  opacity: 0.4;
-  -webkit-transition: opacity 500ms;
-  -moz-transition: opacity 500ms;
-  -o-transition: opacity 500ms;
-  -ms-transition: opacity 500ms;
-  transition: opacity 500ms;
-  z-index: 0; }
-
-.tamVideo {
-  width: 100%;
-  height: 40vh; }
+  align-items: center; }
+  .video-inspiracion .tamanoVideo {
+    width: 90%;
+    height: 25vh;
+    margin: 2vh; }
 
 @media (min-width: 1024px) {
   /*estas son clases de main capitulos*/
-  .titulo-cap {
+  .titulos {
     /*titulo "temporadas"*/
     font-size: 3em; }
-  .padre-cap {
-    /*posicion y espaciodado de las temporadas*/
-    width: 100%;
-    height: auto; }
-  .cads {
+  .portada-cap .cads {
     /*tamaño y sombreado de las cads*/
     width: 40vh;
     height: 55vh;
     margin: 10vh;
     overflow: hidden; }
-  .num-cap {
-    font-size: 5em; } }
+    .portada-cap .cads .num-cap {
+      font-size: 5em; }
+  .video-inspiracion {
+    flex-direction: row; }
+    .video-inspiracion .tamanoVideo {
+      height: 50vh; } }
 
-/*estas son clases de main contactos*/
+.titulos {
+  color: #0b0bfc;
+  font-size: 2em;
+  text-align: center;
+  font-family: cursive; }
+
 .padre-ubi {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  margin: 3vh 0vh; }
+  .padre-ubi .tex-Avenida {
+    font-family: 'Mynerve';
+    font-weight: bold;
+    color: yellow;
+    font-size: 1.5em;
+    line-height: 5vh; }
+  .padre-ubi .mapa {
+    width: 40vh;
+    height: 40vh; }
 
-.cen-tex-item {
-  font-family: 'Mynerve';
-  font-weight: bold;
-  color: yellow;
-  font-size: 1.5em;
-  line-height: 10vh; }
-
-.mapa {
-  width: 60vh;
-  height: 60vh; }
-
-.cen-form {
-  padding-left: 20vh; }
+.centrar-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3vh 0vh; }
+  .centrar-form .tamano-form {
+    width: 40vh; }
 
 @media (min-width: 1024px) {
-  /*estas son clases de main contactos*/
+  .titulos {
+    font-size: 2.5em; }
   .padre-ubi {
     flex-direction: row; }
-  .cen-tex-item {
-    font-size: 1.8em; }
-  .mapa {
-    width: 90vh; }
-  .cen-form {
-    padding-left: 80vh; } }
+    .padre-ubi .tex-Avenida {
+      font-size: 1.8em;
+      line-height: 10vh; }
+    .padre-ubi .mapa {
+      width: 90vh;
+      height: 70vh; }
+  .centrar-form .tamano-form {
+    width: 100vh; } }
 
 /*todas estas clases son del footer*/
 .footer {

@@ -1,46 +1,66 @@
-/*estas son clases de main contactos*/
+.titulos{
+    color: rgb(11, 11, 252);
+    font-size: 2em;
+    text-align: center;
+    font-family: cursive;
+}
+
+
+
 .padre-ubi {
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin: 3vh 0vh;
+    .tex-Avenida {
+        font-family: 'Mynerve';
+        font-weight: bold;
+        color: rgb(255, 255, 0);
+        font-size: 1.5em;
+        line-height: 5vh;
+    }
+    .mapa {
+        width: 40vh;
+        height: 40vh;
+    }
 }
 
-.cen-tex-item {
-    font-family: 'Mynerve';
-    font-weight: bold;
-    color: rgb(255, 255, 0);
-    font-size: 1.5em;
-    line-height: 10vh;
+
+.centrar-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3vh 0vh;
+    .tamano-form{
+        width: 40vh;
+    }
 }
 
-.mapa {
-    width: 60vh;
-    height: 60vh;
-}
-
-.cen-form {
-    padding-left: 20vh;
-}
 
 @media (min-width: 1024px) {
 
-    /*estas son clases de main contactos*/
+    .titulos{
+        font-size: 2.5em;
+    }
     .padre-ubi {
         flex-direction: row;
+        .tex-Avenida {
+            font-size: 1.8em;
+            line-height: 10vh;
+        }
+        .mapa {
+            width: 90vh;
+            height: 70vh;
+        }
     }
-
-    .cen-tex-item {
-        font-size: 1.8em;
+    .centrar-form{
+        .tamano-form{
+            width: 100vh;
+        }
     }
+    
 
-    .mapa {
-        width: 90vh;
-
-    }
-
-    .cen-form {
-        padding-left: 80vh;
-    }
 }

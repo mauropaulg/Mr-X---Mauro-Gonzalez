@@ -1,41 +1,41 @@
 /*estas son clases del main index*/
 .main {
     grid-area:main;
+    .mov-padre{
+        .items {
+            background-color: $color-secundario;
+            border: $borde-general;
+            width: auto;
+            height: auto;
+            text-decoration: underline;
+            text-align: center;
+            font-family: cursive;
+            font-size: 1em;
+            margin: 3% 9%;
+            padding: 2vh;
+        }  
+    }
 }
 
-.items {
-    background-color: $color-secundario;
-    border: $borde-general;
-    width: auto;
-    height: auto;
-    text-decoration: underline;
-    text-align: center;
-    font-family: cursive;
-    font-size: 1em;
-    margin: 3% 9%;
-    padding: 2vh;
-}
+
 @media (min-width: 1024px){
     /*estas son clases de main de la pagina principal (index)*/
         .main {
             width: 100%;
             height: auto;
             margin-top: -20vh;
-    
-        }
-    
-        .mov-padre {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: end;
-        }
-    
-        .items {
-            width: 150vh;
-            font-size: 2.3em;
-            margin-top: 5vh;
-            margin-right: 5vh;
-            padding: 5vh;
+            .mov-padre {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: end;
+                .items {
+                    width: 150vh;
+                    font-size: 2.3em;
+                    margin-top: 5vh;
+                    margin-right: 5vh;
+                    padding: 5vh;
+                }
+            }
         }
 }
