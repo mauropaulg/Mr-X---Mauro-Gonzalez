@@ -22,6 +22,7 @@ body {
   grid-area: head; }
   .header .cabecera .titulo {
     /* pocisiciona titulo de la cabecera*/
+    font-family: 'Mynerve', cursive;
     font-family: cursive;
     font-size: 2em;
     color: #0b0bfc;
