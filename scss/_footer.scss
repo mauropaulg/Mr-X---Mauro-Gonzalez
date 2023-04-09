@@ -44,7 +44,7 @@
 .mov-text {
     /*centrar los textos*/
     font-size: 0.8em;
-    font-family: cursive;
+    font-family: 'Mynerve',cursive;;
 }
 
 @media (min-width: 1024px) {
@@ -80,5 +80,6 @@
         .mov-text {
             /*centrar los textos*/
             font-size: 1.3em;
+            font-family: cursive;
         }
 }
